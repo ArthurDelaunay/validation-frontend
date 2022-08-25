@@ -5,6 +5,8 @@ import User from "./pages/User"
 import NewUser from "./pages/NewUser"
 import NotFound from "./pages/NotFound"
 
+import Layout from "./layout/Layout"
+
 const App = () => {
   return (
     <BrowserRouter>

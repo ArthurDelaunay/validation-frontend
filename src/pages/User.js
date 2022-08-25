@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-
+import Layout from "../layout/Layout"
 const User = () => {
   const params = useParams()
 
@@ -22,12 +22,14 @@ const User = () => {
   return (
     <>
       {!user ? (
-        <div>Loading</div>
+        <Layout title="Loading">
+          <div>Loading</div>
+        </Layout>
       ) : (
-        <main>
+        <Layout title={user.name}>
           <h1>{user.name}</h1>
           <img src={user.profile_picture} alt={user.name} />
-        </main>
+        </Layout>
       )}
     </>
   )

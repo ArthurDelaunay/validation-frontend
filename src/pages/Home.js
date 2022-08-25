@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Layout from "../layout/Layout"
 
 const Home = () => {
   //states
@@ -16,12 +17,6 @@ const Home = () => {
     setTitle(response)
   }
 
-  return (
-    <>
-      <main>
-        <h1>{title}</h1>
-      </main>
-    </>
-  )
+  return <Layout title={title} />
 }
 export default Home

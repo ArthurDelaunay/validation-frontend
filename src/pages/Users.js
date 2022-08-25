@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import Layout from "../layout/Layout"
 
 const Users = () => {
   // states
@@ -18,7 +19,7 @@ const Users = () => {
   }
 
   return (
-    <main>
+    <Layout title="Users">
       {users.map((user) => {
         return (
           <Link key={user.name} to={`/users/${user.slug}`}>
@@ -29,7 +30,7 @@ const Users = () => {
           </Link>
         )
       })}
-    </main>
+    </Layout>
   )
 }
 
