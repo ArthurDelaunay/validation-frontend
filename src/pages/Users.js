@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+
 import Layout from "../layout/Layout"
+import Grid from "../components/Grid"
+import Card from "../components/Card"
 
 const Users = () => {
   // states
@@ -20,16 +22,11 @@ const Users = () => {
 
   return (
     <Layout title="Users">
-      {users.map((user) => {
-        return (
-          <Link key={user.name} to={`/users/${user.slug}`}>
-            <article>
-              <h2>{user.name}</h2>
-              <img src={user.profile_picture} alt={user.name}></img>
-            </article>
-          </Link>
-        )
-      })}
+      <Grid>
+        {users.map((user) => {
+          return <Card key={user.name} user={user} />
+        })}
+      </Grid>
     </Layout>
   )
 }

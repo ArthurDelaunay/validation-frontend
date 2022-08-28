@@ -27,8 +27,8 @@ const User = () => {
         </Layout>
       ) : (
         <Layout title={user.name}>
-          <h1>{user.name}</h1>
           <img src={user.profile_picture} alt={user.name} />
+          <h2>{user.name}</h2>
         </Layout>
       )}
     </>
