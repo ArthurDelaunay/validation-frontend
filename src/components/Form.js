@@ -105,7 +105,6 @@ const Form = () => {
       />
 
       <Select
-        label="City : "
         handleChange={handleCityChange}
         value={city}
         options={selectOptions}

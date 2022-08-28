@@ -1,4 +1,4 @@
-const Select = ({ label, handleChange, value, options }) => {
+const Select = ({ handleChange, value, options }) => {
   return (
     <select onChange={handleChange} value={value}>
       {options.map((option) => {
