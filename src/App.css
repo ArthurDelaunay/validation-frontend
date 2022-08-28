@@ -24,6 +24,11 @@ body {
   z-index: 5;
 }
 
+.title-hover:hover {
+  transform: scale(1.2);
+  z-index: 5;
+}
+
 .shadow-title {
   color: transparent;
   background: #222;

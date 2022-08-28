@@ -70,7 +70,11 @@ const Form = () => {
   }
 
   return (
-    <form action="" onSubmit={handleSubmit}>
+    <form
+      action=""
+      onSubmit={handleSubmit}
+      className="flex flex-col gap-3 mx-10"
+    >
       <br />
       <Input
         label="Name : "
@@ -87,6 +91,7 @@ const Form = () => {
         label="Password : "
         handleChange={handlePasswordChange}
         value={password}
+        placeholder="enter your password.."
         type="password"
         error={errors.find((error) => {
           return error.param === "password"
@@ -97,13 +102,21 @@ const Form = () => {
         label="Email : "
         handleChange={handleEmailChange}
         value={email}
-        type="text"
+        type="email"
         placeholder="enter your email.."
         error={errors.find((error) => {
           return error.param === "email"
         })}
       />
 
+      <Input
+        label="Picture : "
+        handleChange={handleImageChange}
+        value={image}
+        type="url"
+        placeholder="enter your picture for your profile.."
+        isRequire={false}
+      />
       <Select
         handleChange={handleCityChange}
         value={city}
@@ -112,15 +125,6 @@ const Form = () => {
           return error.param === "city"
         })}
       />
-
-      <Input
-        label="Picture : "
-        handleChange={handleImageChange}
-        value={image}
-        type="text"
-        placeholder="enter your picture for your profile.."
-      />
-
       <Button type="submit" text="Submit User" />
     </form>
   )
